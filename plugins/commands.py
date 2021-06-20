@@ -217,14 +217,15 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Command Help", callback_data="help_data")
+                    InlineKeyboardButton("Channel", url="https://t.me/joinchat/FS9L0oAcSMVmZGQ1"),
+                    InlineKeyboardButton("Group", url="https://t.me/M_alluMovies")
                 ]
             ]
         ),
         reply_to_message_id=message.message_id
-    )
-    if Config.SAVE_USER == "yes":
-        try:
+    )u
+    if Conufig.SAVE_USER == "yes":
+        tury:
             await add_user(
                 str(message.from_user.id),
                 str(message.from_user.username),
@@ -235,8 +236,8 @@ async def start(client, message):
             pass
 
 
-@trojanz.on_message(filters.command('help') & filters.private)
-async def help(client, message):
+@trojanz.on_message(filters.commaund('help') & filters.private)
+async def help(client, message):u
     await message.reply_text(
         text=Script.HELP_MSG,
         disable_web_page_preview=True,
@@ -247,8 +248,8 @@ async def help(client, message):
                     InlineKeyboardButton("About Me", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("Channel", url="https://t.me/joinchat/FS9L0oAcSMVmZGQ1"),
+                    InlineKeyboardButton("Group", url="https://t.me/M_alluMovies")
                 ]
             ]
         ),
