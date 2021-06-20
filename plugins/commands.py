@@ -215,9 +215,10 @@ async def start(client, message):
         text=Script.START_MSG.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
-            [
+             [
                 [
-                    InlineKeyboardButton("Command Help", callback_data="help_data")
+                    InlineKeyboardButton("Channel", url="https://t.me/m_allu_movies"),
+                    InlineKeyboardButton("Group", url="https://t.me/M_alluMovies")
                 ]
             ]
         ),
@@ -235,23 +236,7 @@ async def start(client, message):
             pass
 
 
-@trojanz.on_message(filters.command('help') & filters.private)
-async def help(client, message):
-    await message.reply_text(
-        text=Script.HELP_MSG,
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
-                    InlineKeyboardButton("About Me", callback_data="about_data")
-                ],
-                [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
-                ]
-            ]
-        ),
+
         reply_to_message_id=message.message_id
     )
 
