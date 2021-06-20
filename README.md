@@ -51,9 +51,9 @@
 (You need to be an admin or Auth User in order to use these commands)
 
 > Filter Commands
-* `/add <filtername> <filtercontent>`  -  To add your filter. You can also reply to your content with /add command.
+* `/filter <filtername> <filtercontent>`  -  To add your filter. You can also reply to your content with /add command.
 
-* `/del <filtername>`  -  Delete your filter.
+* `/stop <filtername>`  -  Delete your filter.
 
 * `/delall`  -  Delete all filters from group. (Group Owner Only!)
 
